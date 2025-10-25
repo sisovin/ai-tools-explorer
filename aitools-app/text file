@@ -1,0 +1,33 @@
+You are an expert mobile developer specializing in React Native and Expo conversions. Convert my Next.js web application to a fully functional Expo React Native project ready for Android Studio.
+
+**Project Context:**
+- Current stack: Next.js 16.0.0, React 19.2.0, React-dom 19.0.0
+- Using Shadcn UI components (ai-tools-explorer app)
+- Key files: web/page.tsx, web/layout.tsx, package.json
+
+**Conversion Requirements:**
+
+1. **Project Setup**
+   - Create new folder "aitools-app" inside existing ai-tools-explorer project
+   - Initialize as Expo React Native project with latest SDK
+   - Use package name: com.aitools.explorer
+
+2. **Code Migration**
+   - Convert web/page.tsx and web/layout.tsx to App.tsx with React Native compatibility
+   - Adapt Shadcn UI components to equivalent React Native components
+   - Handle routing conversion (Next.js pages to React Native navigation)
+   - Merge and install all dependencies from package.json
+
+3. **Build Process**
+   - Run `expo prebuild` to generate android/ and ios/ folders
+   - Ensure Gradle configuration is correct and error-free
+   - Verify AndroidManifest.xml is properly configured
+   - Skip icon generation (I'll provide custom 1024x1024 icon)
+
+4. **Quality Assurance**
+   - Confirm Android folder structure is complete and ready for Android Studio
+   - Resolve any dependency conflicts during migration
+   - Ensure no build errors in Gradle configuration
+   - Provide summary of changes and any manual adjustments needed
+
+**Deliverable:** Fully prepared Android project folder that can be immediately opened in Android Studio without additional configuration.
