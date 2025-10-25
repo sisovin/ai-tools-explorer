@@ -1,0 +1,5 @@
+{
+  "name": "AI Tools Explorer",
+  "description": "A modern web application to discover, search, and filter AI tools. It features a dynamic interface and leverages the Gemini API to generate creative use cases for each tool, providing deeper insights for users.",
+  "requestFramePermissions": []
+}

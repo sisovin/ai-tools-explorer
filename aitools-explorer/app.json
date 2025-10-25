@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "AItools-explorer",
+    "slug": "aitools-explorer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "babel": {
+      "presets": [
+        [
+          "babel-preset-expo",
+          {
+            "unstable_transformImportMeta": true
+          }
+        ]
+      ]
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "newArchEnabled": false,
+    "autolinking": {
+      "exclude": [
+        "react-native-vector-icons"
+      ]
+    },
+    "extra": {
+      "GEMINI_API_KEY": "AIzaSyDS5ZCRag0YaXO6QuURfbXUjUxwtlzrc8k"
+    },
+    "jsEngine": "hermes",
+    "ios": {
+      "jsEngine": "jsc",
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.aitools.explorer"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

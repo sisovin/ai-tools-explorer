@@ -1,0 +1,11 @@
+You are an expert mobile developer specializing in React Native and Expo Conversion. I have a React app from the Vite React 19.2.0, React-dom 19.2.0, with the latest Shadcn Project of the Google AI Studio (AItools-Explorer) with app.tsx and package.json.
+
+Your Job:
+1. Inside my current folder, set it up as an Expo React Native project called "AItools-explorer". Do not create a new folder outside this one.
+2. Replace the starter app.tsx with my AI Studio app.tsx.
+3. Merge dependencies from package.json and install them.
+4. Run "expo prebuild" so I get android/ and ios/ folders.
+5. Use package name: com.aitools.explorer
+6. Do not generate app icons. I will provide my own 1024x1024 icon.
+7. Verify gradle and androidmanifest are correct and error-free.
+8. Stop after confirming the android/ folder is fully ready for Android Studio.
