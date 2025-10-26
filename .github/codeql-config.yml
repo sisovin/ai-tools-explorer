@@ -1,0 +1,26 @@
+name: "CodeQL Configuration"
+
+disable-default-queries: false
+
+queries:
+  - uses: security-and-quality
+
+paths:
+  - aitools-app
+  - aitools-explorer
+  - web
+
+paths-ignore:
+  - '**/node_modules/**'
+  - '**/android/**'
+  - '**/ios/**'
+  - '**/*.min.js'
+  - '**/dist/**'
+  - '**/build/**'
+  - '**/.expo/**'
+  - '**/.next/**'
+
+# Only analyze JavaScript/TypeScript, exclude Java/Kotlin
+languages:
+  javascript:
+    build-mode: autobuild
