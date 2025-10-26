@@ -106,15 +106,24 @@ npm install
 
 ### 3. Environment Setup
 
-Create a `.env.local` file in the root directory and add your API keys:
+Copy the `.env.example` file to `.env` and add your API keys:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env` and add your Google Gemini API key:
 
 ```env
 # Google Gemini API Key (required for AI features)
-GEMINI_API_KEY=your_gemini_api_key_here
+# Get your API key from: https://makersuite.google.com/app/apikey
+GEMINI_API_KEY=your_actual_api_key_here
 
 # Optional: Other environment variables
 NODE_ENV=development
 ```
+
+**Important:** Never commit your `.env` file to version control as it contains sensitive information.
 
 ### 4. Start Development Server
 
