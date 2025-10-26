@@ -8,7 +8,11 @@ queries:
 # Only analyze these specific paths
 paths:
   - aitools-app/src
+  - aitools-app/lib
   - aitools-explorer/src
+  - aitools-explorer/components
+  - aitools-explorer/lib
+  - aitools-explorer/hooks
   - web/app
   - web/components
   - web/lib
@@ -24,6 +28,13 @@ paths-ignore:
   - "**/build/**"
   - "**/.expo/**"
   - "**/.next/**"
+  - "**/*.config.js"
+  - "**/*.config.ts"
+  - "**/vite.config.*"
+  - "**/next.config.*"
+  - "**/tailwind.config.*"
+  - "**/postcss.config.*"
+  - "**/eslint.config.*"
   - "**/*.test.*"
   - "**/*.spec.*"
   - "**/coverage/**"
