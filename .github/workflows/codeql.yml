@@ -2,11 +2,11 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
   schedule:
-    - cron: '0 6 * * 1'  # Weekly on Mondays
+    - cron: "0 6 * * 1" # Weekly on Mondays
 
 jobs:
   analyze:
@@ -21,23 +21,42 @@ jobs:
       fail-fast: false
       matrix:
         language: [ 'javascript' ]
-        # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
-        # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: ${{ matrix.language }}
-        config-file: .github/codeql-config.yml
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript
+          config-file: .github/codeql-config.yml
 
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
 
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
-      with:
-        category: "/language:${{matrix.language}}"
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Install web dependencies
+        run: cd web && npm install
+
+      - name: Install aitools-explorer dependencies
+        run: cd aitools-explorer && npm install
+
+      - name: Install aitools-app dependencies
+        run: cd aitools-app && npm install
+
+      - name: Build web project
+        run: cd web && npm run build
+
+      - name: Build aitools-explorer project
+        run: cd aitools-explorer && npm run build
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:javascript"

@@ -5,22 +5,33 @@ disable-default-queries: false
 queries:
   - uses: security-and-quality
 
+# Only analyze these specific paths
 paths:
-  - aitools-app
-  - aitools-explorer
-  - web
+  - aitools-app/src
+  - aitools-explorer/src
+  - web/app
+  - web/components
+  - web/lib
+  - web/hooks
 
+# Explicitly ignore these paths
 paths-ignore:
-  - '**/node_modules/**'
-  - '**/android/**'
-  - '**/ios/**'
-  - '**/*.min.js'
-  - '**/dist/**'
-  - '**/build/**'
-  - '**/.expo/**'
-  - '**/.next/**'
-
-# Only analyze JavaScript/TypeScript, exclude Java/Kotlin
-languages:
-  javascript:
-    build-mode: autobuild
+  - "**/node_modules/**"
+  - "**/android/**"
+  - "**/ios/**"
+  - "**/*.min.js"
+  - "**/dist/**"
+  - "**/build/**"
+  - "**/.expo/**"
+  - "**/.next/**"
+  - "**/*.test.*"
+  - "**/*.spec.*"
+  - "**/coverage/**"
+  - "**/.github/**"
+  - "**/*.config.js"
+  - "**/*.config.ts"
+  - "**/vite.config.*"
+  - "**/next.config.*"
+  - "**/tailwind.config.*"
+  - "**/postcss.config.*"
+  - "**/eslint.config.*"
