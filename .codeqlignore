@@ -1,0 +1,41 @@
+# CodeQL Ignore Patterns
+
+# Ignore Android/Java/Kotlin directories
+
+**/android/**
+**/ios/**
+**/*.java
+**/*.kt
+**/*.gradle
+**/*.xml
+
+# Ignore build artifacts
+
+**/node_modules/**
+**/dist/**
+**/build/**
+**/.expo/**
+**/.next/**
+
+# Ignore config files
+
+**/*.config.js
+**/*.config.ts
+**/vite.config.*
+**/next.config.*
+**/tailwind.config.*
+**/postcss.config.*
+**/eslint.config.*
+
+# Ignore test and coverage files
+
+**/*.test.*
+**/*.spec.*
+**/coverage/**
+
+# Ignore documentation and assets
+
+**/*.md
+**/*.txt
+**/public/**
+**/assets/**
