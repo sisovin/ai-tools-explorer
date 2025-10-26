@@ -30,9 +30,7 @@
         "react-native-vector-icons"
       ]
     },
-    "extra": {
-      "GEMINI_API_KEY": "AIzaSyDS5ZCRag0YaXO6QuURfbXUjUxwtlzrc8k"
-    },
+    "extra": {},
     "jsEngine": "hermes",
     "ios": {
       "jsEngine": "jsc",
